@@ -6,7 +6,7 @@
 FROM centos:7
 MAINTAINER Nicolas Fraison <nfraison@yahoo.fr>
 
-ENV EPEL_VERSION 7-5
+ENV EPEL_VERSION latest-7
 
 # Add tooling and Epel
 RUN yum install -y wget tar net-tools
