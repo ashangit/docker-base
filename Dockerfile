@@ -9,7 +9,8 @@ MAINTAINER Nicolas Fraison <nfraison@yahoo.fr>
 ENV EPEL_VERSION latest-7
 
 # Add tooling and Epel
-RUN yum install -y wget tar net-tools
+RUN yum install -y wget tar net-tools && \
+    yum clean all
 RUN wget https://dl.fedoraproject.org/pub/epel/epel-release-${EPEL_VERSION}.noarch.rpm && \
     rpm -ivh epel-release-${EPEL_VERSION}.noarch.rpm && \
     rm -f epel-release-${EPEL_VERSION}.noarch.rpm
